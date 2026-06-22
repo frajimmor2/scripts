@@ -1,0 +1,1 @@
+$cores = (Get-CimInstance Win32_ComputerSystem).NumberOfLogicalProcessors; Get-CimInstance Win32_PerfFormattedData_PerfProc_Process | Where-Object { $.Name -notmatch '_Total|Idle' } | Sort-Object PercentProcessorTime -Descending | Select-Object -First 5 | ForEach-Object { '{0} - {1:N1}%' -f $.Name, ($_.PercentProcessorTime / $cores) }
