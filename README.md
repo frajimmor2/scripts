@@ -8,6 +8,7 @@ This repository contains some of the scripts I have developed.
 * [Top 5 CPU-Consuming Processes](#top-5-cpu-consuming-processes)
 * [Windows Hardening](#windows-hardening)
 * [Sudo Bruteforce](#sudo-bruteforce)
+* [Debian Hardening](#debian-hardening)
 
 ---
 
@@ -31,6 +32,12 @@ This PowerShell script performs a comprehensive security validation and system h
 
 ---
 
-## Sudo bruteforce
+## Sudo Bruteforce
 
 Wouldn't it be funny if you tried guessing the sudo password instead of escalating privileges? I tried it while learning in a lab and it surprisingly worked! Here is the script I used.
+
+---
+
+## Debian Hardening
+
+This bash script is an adaptation of the windows hardening script.
