@@ -9,6 +9,7 @@ This repository contains some of the scripts I have developed.
 * [Windows Hardening](#windows-hardening)
 * [Sudo Bruteforce](#sudo-bruteforce)
 * [Debian Hardening](#debian-hardening)
+* [Ip Reputation Check](#ip-reputation-check)
 
 ---
 
@@ -41,3 +42,7 @@ Wouldn't it be funny if you tried guessing the sudo password instead of escalati
 ## Debian Hardening
 
 This bash script is an adaptation of the windows hardening script.
+
+## Ip Reputation Check
+
+This script performs IP reputation analysis by querying multiple Threat Intelligence services and aggregating their results. Given an IP address, it validates the input and retrieves security-related information from AbuseIPDB, VirusTotal, and Spamhaus, including abuse reports, malicious detections, associated metadata, and blacklist status. The collected data provides a quick overview of an IP address's reputation and helps identify potentially malicious or suspicious activity. The script requires valid API keys and authentication tokens from these services in order to run correctly.
