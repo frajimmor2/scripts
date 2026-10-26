@@ -10,6 +10,7 @@ This repository contains some of the scripts I have developed.
 * [Sudo Bruteforce](#sudo-bruteforce)
 * [Debian Hardening](#debian-hardening)
 * [Ip Reputation Check](#ip-reputation-check)
+* [Debian based ram acquisition](#debian-based-ram-acquisition)
 
 ---
 
@@ -43,6 +44,16 @@ Wouldn't it be funny if you tried guessing the sudo password instead of escalati
 
 This bash script is an adaptation of the windows hardening script.
 
+---
+
 ## Ip Reputation Check
 
 This script performs IP reputation analysis by querying multiple Threat Intelligence services and aggregating their results. Given an IP address, it validates the input and retrieves security-related information from AbuseIPDB, VirusTotal, and Spamhaus, including abuse reports, malicious detections, associated metadata, and blacklist status. The collected data provides a quick overview of an IP address's reputation and helps identify potentially malicious or suspicious activity. The script requires valid API keys and authentication tokens from these services in order to run correctly.
+
+---
+
+## Debian based ram acquisition
+
+This script generates a memory dump for each process in RAM and saves it to a specified directory. It uses gcore, a commonly available software on linux systems. The script uses gcore to generate that memory dump in a loop. It also generates a SHA256-manifest containing the hashes of the generated files. The generated files are assigned only-read privileges to protect the integrity of the evidences.
+
+This script was created for learning purposes. Gcore generates a memory dump for each process individually and does not capture the entire contents of RAM. Therefore, it should only be considered a useful complementary forensic tool for memory acquisition.
